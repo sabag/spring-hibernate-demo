@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+#      ddl-auto: create-drop
+      ddl-auto: update
+    open-in-view: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: postgres
+    password: admin
+
+  level:
+    root: info
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener: info
+
+
+
